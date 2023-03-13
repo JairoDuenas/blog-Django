@@ -1,0 +1,18 @@
+.footer-name {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-item.active .footer-link {
+  color: #a7d2d3;
+  text-decoration: underline;
+}

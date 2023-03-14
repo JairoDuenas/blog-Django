@@ -16,10 +16,10 @@
         <li class="footer-item py-2 {% if request.path == '/about/' %}active{% endif %} px-lg-4"><a class="footer-link"
           href="{% url 'about' %}">About</a>
         </li>
-        <li class="footer-item py-2{% if request.path == '/portfolio/' %}active{% endif %} px-lg-4"><a class="footer-link"
-            href="#">Portfolio</a>
+        <li class="footer-item py-2 {% if request.path == '/portfolio/' %}active{% endif %} px-lg-4"><a class="footer-link"
+            href="{% url 'portfolio' %}">Portfolio</a>
         </li>
-        <li class="footer-item py-2{% if request.path == '/contact/' %}active{% endif %} px-lg-4"><a class="footer-link"
+        <li class="footer-item py-2 {% if request.path == '/contact/' %}active{% endif %} px-lg-4"><a class="footer-link"
             href="#">Contact</a>
         </li>
       </ul>

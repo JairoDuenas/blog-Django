@@ -18,7 +18,7 @@
             href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item {% if request.path == '/about/' %}active{% endif %} px-lg-4"><a class="nav-link"
-            href="#">About</a>
+            href="{% url 'about' %}">About</a>
         </li>
         <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %} px-lg-4"><a class="nav-link"
             href="#">Portfolio</a>

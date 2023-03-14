@@ -2,17 +2,18 @@
 
 {% block title %} Home {% endblock title %}
 
+{% load static %}
+
 {% block content %}
-<header class="py-5 bg-dark bg-gradient" >
+<header class="bg-dark bg-gradient text-center p-4 text-center shadow-1-strong" >
   <div class="container px-5">
     <div class="row gx-5 justify-content-center">
       <div class="col-lg-6">
         <div class="text-center my-5">
           <h1 class="display-5 fw-bolder text-white mb-2">Hola, Soy Jairo </h1>
           <h4 class="display-6 text-white mb-2">Desarrollador Web / Backend</h4>
-          <p class="lead text-white-50 mb-4">Cuento con las habilidades necesarias para el desarrollo de aplicaciones web / backend, poseo gran capacidad de adaptabilidad al cambio, trabajo en equipo, buenas relaciones interpersonales, con iniciativa y creatividad en la búsqueda de soluciones, pensamiento estratégico, alto sentido de compromiso con las entidades y personas que intervienen en mi oficio.</p>
-          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-            <a class="btn btn-outline-light btn-lg px-4" href="#features">About me</a>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center py-4">
+            <a class="btn btn-outline-light btn-lg px-4" href="{% url 'about' %}">About me</a>
             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Portfolio</a>
           </div>
         </div>

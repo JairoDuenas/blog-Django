@@ -2,7 +2,7 @@
 
 {% block footer %}
 <footer class="bg-secondary bg-gradient d-grid d-sm-flex justify-content-sm-center align-items-center">
-  <div class="footer-left container py-4 px-4">
+  <div class="footer-left container mt-4 px-4">
     <a class="footer-name" href="{% url 'home' %}">
       <img src="{% static 'img/logo.png' %}" alt="Logo" width="50" height="50"
         class="d-inline-block align-text-center">
@@ -13,8 +13,8 @@
         <li class="footer-item py-2 {% if request.path == '/' %}active{% endif %} px-lg-4"><a class="footer-link"
             href="{% url 'home' %}">Home</a>
         </li>
-        <li class="footer-item py-2{% if request.path == '/about/' %}active{% endif %} px-lg-4"><a class="footer-link"
-            href="#">About</a>
+        <li class="footer-item py-2 {% if request.path == '/about/' %}active{% endif %} px-lg-4"><a class="footer-link"
+          href="{% url 'about' %}">About</a>
         </li>
         <li class="footer-item py-2{% if request.path == '/portfolio/' %}active{% endif %} px-lg-4"><a class="footer-link"
             href="#">Portfolio</a>
@@ -26,20 +26,20 @@
     </div>
 
   </div>
-  <div class="footer-rigth container text-center py-4">
+  <div class="footer-rigth container text-center mt-4">
     <div class="text-center d-flex justify-content-evenly">
-      <a href="#" class=" text-decoration-none fs-2">
+      <a href="https://twitter.com/Jairodv_" target="_blank" class="text-decoration-none fs-2">
         <i class="bi bi-twitter text-dark"></i>
       </a>
-      <a href="#" class="text-decoration-none fs-2">
+      <a href="https://www.linkedin.com/in/jhondueñas" target="_blank" class="text-decoration-none fs-2">
         <i class="bi bi-linkedin text-dark"></i>
       </a>
-      <a href="#" class="text-decoration-none fs-2">
+      <a href="https://github.com/JairoDuenas" target="_blank" class="text-decoration-none fs-2">
         <i class="bi bi-github text-dark"></i>
       </a>
     </div>
     <div class="container w-50 text-center ">
-      <p class="text-center text-white py-4">Copyright &copy; Jairo Dueñas 2023</p>
+      <p class="text-center text-white mt-4">Copyright &copy; Jairo Dueñas 2023</p>
     </div>
   </div>
 </footer>

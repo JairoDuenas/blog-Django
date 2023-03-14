@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock title %}
+
+{% load static %}
+
+
+{% block content %}
+
+<main class="bg-dark bg-gradient">
+  <section class="container ">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-md-4 p-0 text-center my-4 ">
+        <img src="{% static 'img/jairo.png' %}" class="w-50 img-fluid img-perfil rounded-pill" alt="photo-perfil">
+      </div>
+      <div class="col-md-8 my-4 p-0">
+        <div class="card-body text-white">
+          <h5 class="card-title text-center mb-4 display-6">
+            Jhon Jairo Dueñas Vega
+          </h5>
+          <h4 class="text-center">Ingeniero de sistemas</h4>
+          <h6 class="text-info text-center">Desarrollo Web / Backend</h6>
+          <p class="card-text text-white-50 py-4">
+            Cuento con las habilidades necesarias para el desarrollo de aplicaciones web / backend, poseo gran capacidad
+            de
+            adaptabilidad al cambio, trabajo en equipo, buenas relaciones interpersonales, con iniciativa y creatividad
+            en la
+            búsqueda de soluciones, pensamiento estratégico, alto sentido de compromiso con las entidades y personas que
+            intervienen en mi oficio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="knowledge bg-dark">
+    <h4 class=" text-white text-center py-4 mb-2">Conocimientos</h4>
+    <div class="container text-white py-4 text-center">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-around align-items-center">
+        <div class="col python my-4 mx-4" style="width: 100px;">
+          <a href="https://www.python.org/downloads/" data-bs-toggle="tooltip" data-bs-title="Python" target="_blank">
+            <img class="img-fluid rounded-circle" src="{% static 'img/python.png' %}" alt="image-python">
+          </a>
+        </div>
+        <div class="col django my-4 mx-4" style="width: 100px;">
+          <a href="https://www.djangoproject.com/" target="_blank" data-bs-toggle="tooltip" data-bs-title="Django">
+            <img class="img-fluid rounded-circle" src="{% static 'img/django.jpeg' %}" alt="image-django">
+          </a>
+        </div>
+        <div class="col postgresql my-4 mx-4" style="width: 100px;">
+          <a href="https://www.postgresql.org/" target="_blank" data-bs-toggle="tooltip" data-bs-title="PostgreSQL">
+            <img class="img-fluid rounded" src="{% static 'img/postgresql.png' %}" alt="image-postgresql">
+          </a>
+        </div>
+        <div class="col bootstrap my-4 mx-4" style="width: 100px;">
+          <a href="https://getbootstrap.com/" target="_blank" data-bs-toggle="tooltip" data-bs-title="BootStrap">
+            <img class="img-fluid rounded" src="{% static 'img/bootstrap.png' %}" alt="image-bootstrap">
+          </a>
+        </div>
+        <div class="col github my-4 mx-4" style="width: 100px;">
+          <a href="https://github.com/" target="_blank" data-bs-toggle="tooltip" data-bs-title="GitHub">
+            <img class="img-fluid rounded-circle bg-white" src="{% static 'img/github.png' %}" alt="image-github">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="capabilities">
+    <div class="container text-white-50 py-4">
+      <h4 class="text-white text-center mb-4">Capacidades</h4>
+      <p>
+        ✅ Diseñar e implementar sistemas, servicios y aplicaciones informáticas.
+      </p>
+      <p>
+        ✅ Capacidad de diseñar, implementar y administrar datos e información para asegurar su operación y garantizar su
+        producción.
+      </p>
+      <p>
+        ✅ Comprender, aplicar, gestionar y garantizar la seguridad de la información para su procesamiento
+        y ejecución.
+      </p>
+      <p>
+        ✅ Ejecutar proyectos de TI/Software bajo normas internacionales.
+      </p>
+    </div>
+  </section>
+
+
+
+
+</main>
+
+
+{% endblock content %}

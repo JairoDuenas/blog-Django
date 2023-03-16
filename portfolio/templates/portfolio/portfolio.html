@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 
-{% block title %} Home {% endblock title %}
+{% block title %} Portfolio {% endblock title %}
 
 {% load static %}
 
 {% block content %}
-<header class="bg-dark bg-gradient text-center p-4 text-center shadow-1-strong" >
-  <div class="container px-5">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-6">
-        <div class="text-center my-5">
-          <h1 class="display-5 fw-bolder text-white mb-2">Portfolio</h1>
+
+<section class="container-fluid bg-dark bg-gradient d-flex">
+  <main class="container-fluid d-flex justify-content-around py-2">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-around">
+      {% for project in projects %}
+      <div class="col py-2" style="width: 20rem;">
+        <div class="card h-100 bg-dark text-white-50 shadow mb-4" style="width: 19rem;">
+          <img src="{{project.image.url}}" class="card-img-top" alt="image-card">
+          <div class="card-body">
+            <h5 class="card-title text-white">{{project.title}}</h5>
+            <p class="card-text pt-2">{{project.description}}</p>
+            <div class="card-footer text-center pt-4 p-0">
+              <a href="{{project.link}}" target="_blank" class="btn btn-info">Ver App</a>
+            </div>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-  </div>
-</header>
+  </main>
+
+</section>
 {% endblock content %}

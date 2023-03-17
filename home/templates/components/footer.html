@@ -20,7 +20,7 @@
             href="{% url 'portfolio' %}">Portfolio</a>
         </li>
         <li class="footer-item py-2 {% if request.path == '/contact/' %}active{% endif %} px-lg-4"><a class="footer-link"
-            href="#">Contact</a>
+            href="{% url 'contact' %}">Contact</a>
         </li>
       </ul>
     </div>

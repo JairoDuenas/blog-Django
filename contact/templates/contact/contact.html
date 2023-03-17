@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid bg-dark bg-gradient d-flex justify-content-center">
+  <div class=" text-center text-white py-4">
+    <h1 class="py-2">Contact</h1>
+    <p class="mt-2">Su correo electrónico no se hará público</p>
+    <p class="mb-2">Los campos requeridos están marcados * </p>
+    {% if 'valid' in request.GET %}
+    <div class="alert alert-success" role="alert">
+      Información enviada correctamente
+    </div>
+    {% elif 'novalid' in request.GET %}
+    <div class="alert alert-danger" role="alert">
+      Hubo un error, no se envió el correo
+    </div>
+    {% endif %}
+    <div class="container-fluid p-0 m-0">
+      <form class="form-control bg-dark py-4" method="POST" action="">
+        {% csrf_token %}
+        <table class="text-white-50 d-flex justify-content-around">
+          {{my_form.as_table}}
+        </table>
+        <div class="py-4">
+          <input class="btn btn-primary w-25" type="submit" value="Enviar">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

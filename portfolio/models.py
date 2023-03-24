@@ -9,6 +9,7 @@ class Projects(models.Model):
   description = models.TextField(blank=True)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   link = models.CharField(max_length=200, default='')
+  link_git = models.CharField(max_length=200, default='')
 
   class Meta:
     verbose_name='project'
